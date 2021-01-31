@@ -1,4 +1,4 @@
-# odoo-json-rpc
+# odoo-jsonrpc-typescript
 Works for both browser and node.js application
 
 ---
@@ -18,12 +18,12 @@ const purchaseOrderFactory = new BaseModelFactory(PurchaseOrder);
 const purchaseOrderId = await purchaseOrderFactory.create([
     new PurchaseOrder({
         // Shorthand for searching with domains, map will be converted as [key, '=', value]
-        company_id: Domains.create({ name: 'HBX JP' }),
+        company_id: Domains.create({ name: 'Your company' }),
         // Traditional domains that works the same way as Odoo does
         partner_id: new Domains(['name', '=', 'Stussy']),
         picking_type_id: new Domains(
             // Dot syntax works the same way as Odoo does 
-            ['warehouse_id.name', '=', 'Avex JP 3PL'],
+            ['warehouse_id.name', '=', 'A specific warehouse'],
             ['name', '=', 'Receipts']
         ),
         // Search with specific domain, create if not found
