@@ -27,7 +27,7 @@ const purchaseOrderId = await purchaseOrderFactory.create([
             ['name', '=', 'Receipts']
         ),
         // Search with specific domain, create if not found
-        hbx_season_id: new Upsert(
+        my_season_id: new Upsert(
             new HbxSeason({
                 name: 'SS20',
                 code: '1C'
